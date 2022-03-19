@@ -2,17 +2,19 @@ $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
+$txt-color: floralwhite;
+
 
 // Height variables
 $carousel-item-height: 300px;
 
-@mixin zero-margin($pad-up-dn, $pad-left-right) {
-	margin:0px auto;
-	padding: $pad-up-dn $pad-left-right;
+@mixin zero-margin ($pad-up-dn, $pad-left-right) {
+    margin: 0px auto;
+    padding: $pad-up-dn $pad-left-right;
 }
 
 .row-header{
-    @include zero-margin(0px,0px);
+    @include zero-margin(0px, 0px);
 }
 
 .row-content {
@@ -68,21 +70,31 @@ body{
     }
 }
 
-#carousel-style {
+#carouselButton {
     right:0px;
     position: absolute;
     bottom: 0px;
     z-index: 1;
 }
 
+.modal-title {
+    background-color: $background-dark;
+}
+
+.modal-header {
+    background-color: $background-dark;
+    color: $txt-color;
+}
+
 .modal-body {
     background-color: $background-pale;
 }
 
-.modal-header {
-    background: $background-light;
-    color:floralwhite;
-    .close{
-        color:floralwhite;
-    }
+.modal-content {
+    @include zero-margin();
+    border: 0px;
+}
+
+.close {
+    color: $txt-color;
 }
